@@ -8,7 +8,14 @@
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-	binary_tree_t *right = binary_tree_node(parent, value);
+	binary_tree_t *right = NULL;
+
+	if(!parent)
+	{
+		return (NULL);
+	}
+
+	right = binary_tree_node(parent, value);
 
 	if (!parent || !right)
 	{
